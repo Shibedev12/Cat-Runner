@@ -9,7 +9,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Example list screen thing</Text>
+      <Text>Example shoplist screen thing</Text>
+      <button>Hello cruel world</button>
     </View>
   );
 }
