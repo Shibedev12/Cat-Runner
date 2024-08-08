@@ -1,16 +1,26 @@
 import { Text, View } from "react-native";
-
+import { TouchableOpacity } from 'react-native';
+import { StyleSheet } from "react-native";
 export default function Index() {
+    const styles = StyleSheet.create({
+      button: {
+        alignItems: 'center',
+        backgroundColor: "black",
+        color: "white",
+        padding: 10,
+        borderRadius: 500,
+        marginTop: 20,
+        width: 20,
+      }
+    })
+    
   return (
     <View
       style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+          alignItems: "center",
       }}
     >
-      <Text>Example shoplist screen thing</Text>
-      <button>Hello cruel world</button>
+     <TouchableOpacity style={styles.button}><Text></Text></TouchableOpacity>
     </View>
   );
 }
