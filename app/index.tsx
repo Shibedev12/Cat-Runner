@@ -1,26 +1,25 @@
+import React, { useState } from 'react';
 import { Text, View } from "react-native";
 import { TouchableOpacity } from 'react-native';
 import { StyleSheet } from "react-native";
-export default function Index() {
-    const styles = StyleSheet.create({
-      button: {
-        alignItems: 'center',
-        backgroundColor: "black",
-        color: "white",
-        padding: 10,
-        borderRadius: 500,
-        marginTop: 20,
-        width: 20,
-      }
-    })
-    
+
+const Main = () => {
+  function onPress_list() {
+    alert("UI code/editing code coming soon");
+  }
+  const styles = StyleSheet.create({
+    button_TouchableOpacity: {
+      padding: 5,
+      borderRadius: 500,
+    },
+  })
+
   return (
-    <View
-      style={{
-          alignItems: "center",
-      }}
-    >
-     <TouchableOpacity style={styles.button}><Text></Text></TouchableOpacity>
-    </View>
+    <div>
+      <TouchableOpacity onPress={onPress_list} style={styles.button_TouchableOpacity}>List1</TouchableOpacity>
+      <TouchableOpacity onPress={onPress_list} style={styles.button_TouchableOpacity}>List2</TouchableOpacity>
+    </div>
   );
-}
+};
+
+export default Main;
