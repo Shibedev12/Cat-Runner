@@ -1,16 +1,20 @@
 import { TouchableOpacity } from "react-native"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const EditableNote = ({ innerHTML, id, contents, cname}) => {
-  async function save_cont(contents) {
-    await AsyncStorage.setItem({cname}, {contents}) 
-  }
+const EditableNote = ({ innerHTML, id, contents}) => {
     return (
-      <TouchableOpacity onPress={save_cont} contents={contents} id = {id}>
+      <TouchableOpacity contents={contents} id = {id}>
         {innerHTML}
       </TouchableOpacity>
     );
-  };
+  };  
 
-  
-export default EditableNote;
+export function createEditableNote(innerHTML, contents, id) {
+      return (
+        <EditableNote id={id} contents={contents}>
+          {innerHTML}
+        </EditableNote>
+      );
+    };
+
+export default EditableNote ;
