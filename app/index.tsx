@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import EditableNote from './EditableNote';
+import React from 'react';
 import { Text, View, StyleSheet, TextInput } from "react-native";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Checkbox from "./checkbox";
 const Main = () => {
   const styles =  StyleSheet.create({
     container: {
@@ -25,7 +24,7 @@ const Main = () => {
     return (
       <div style={styles.body}>
       <View style={{flexDirection: "row"}}>
-        <MaterialCommunityIcons name="checkbox-blank-outline" size={24} color="white"/>
+        <Checkbox isChecked = {true}/>
         <TextInput 
         style={{
           flex: 1,
