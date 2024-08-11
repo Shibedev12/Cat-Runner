@@ -15,7 +15,7 @@ const Main = () => {
       fontWeight: 'bold',
     }, 
     body: {
-      backgroundColor: "black",
+      backgroundColor: "#343a40",
       position: "absolute",
       zIndex: -1,
       width: "100%",
@@ -31,8 +31,9 @@ const Main = () => {
         style={{
           flex: 1,
           color: "white",
-          backgroundColor: "black",
+          backgroundColor: "#343a40",
           fontSize: 17,
+          marginLeft: 12
         }}
         />
       </View>
