@@ -22,8 +22,8 @@ const CTextinput: React.FC<CTextinputProps> = ({
   useEffect(() => {
     const textArea = textAreaRef.current;
     if (textArea) {
-      textArea.style.height = 'auto'; // Reset height
-      textArea.style.height = `${textArea.scrollHeight}px`; // Set to scrollHeight
+      textArea.style.height = 'auto'; // Reset height (note to self: I should make a buffer for this that I can just reset and boom)
+      textArea.style.height = "${textArea.scrollHeight}px"; // Set to scrollHeight
     }
   }, [inputValue]);
 
@@ -36,11 +36,11 @@ const CTextinput: React.FC<CTextinputProps> = ({
 
   return (
     <textarea
-      ref={textAreaRef}
-      value={inputValue}
-      onChange={handleChange}
-      placeholder={placeholder}
-      {...props}
+    ref={textAreaRef}
+    value={inputValue}
+    onChange={handleChange}
+    placeholder={placeholder}
+    {...props}
     />
   );
 };
