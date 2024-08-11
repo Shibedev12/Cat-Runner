@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Text, View, StyleSheet, TextInput } from "react-native";
 import Checkbox from "./checkbox";
 const Main = () => {
+  const [value, setValue] = useState(false)
   const styles =  StyleSheet.create({
     container: {
       flex: 1,
@@ -24,7 +25,7 @@ const Main = () => {
     return (
       <div style={styles.body}>
       <View style={{flexDirection: "row"}}>
-        <Checkbox isChecked = {true}/>
+        <Checkbox isChecked = {value} onPress={() => {setValue(!value)}}/>
         <TextInput 
         style={{
           flex: 1,

@@ -1,15 +1,17 @@
 import React from "react";
-import {View, Text} from "react-native"
+import {View, Pressable} from "react-native"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 interface CheckBoxProps {
     isChecked: boolean;
+    onPress: () => void;
 }
 const Checkbox = (props: CheckBoxProps) => {
+    const onPress = props.onPress
     const name = props.isChecked ? 'checkbox-marked-outline' : 'checkbox-blank-outline';
-    return (<View>
+    return (<Pressable onPress = {onPress}>
         <MaterialCommunityIcons name={name} size={24} color="white"/>
-    </View>
+    </Pressable>
     )
 }
 
