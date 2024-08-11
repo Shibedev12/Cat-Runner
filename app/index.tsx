@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import { Text, View, StyleSheet, TextInput } from "react-native";
+  import { Text, View, StyleSheet, TextInput } from "react-native";
 import Checkbox from "./checkbox";
+import CTextinput from './CTextinput';
 const Main = () => {
   const [value, setValue] = useState(false)
   const styles =  StyleSheet.create({
@@ -24,9 +25,9 @@ const Main = () => {
   });
     return (
       <div style={styles.body}>
-      <View style={{flexDirection: "row"}}>
+      <View style={{flexDirection: "row", alignItems: "center"}}>
         <Checkbox isChecked = {value} onPress={() => {setValue(!value)}}/>
-        <TextInput 
+        <CTextinput 
         style={{
           flex: 1,
           color: "white",
